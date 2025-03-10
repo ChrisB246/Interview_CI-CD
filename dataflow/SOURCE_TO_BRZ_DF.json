@@ -1,5 +1,5 @@
 {
-	"name": "Source_To_BRZ_DF",
+	"name": "SOURCE_TO_BRZ_DF",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {

@@ -1,24 +1,24 @@
 {
-	"name": "BRZ_TO_SLV_DF",
+	"name": "SLV_TO_GOLD_DF",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "BRZ_sales",
+						"referenceName": "SLV_Sales",
 						"type": "DatasetReference"
 					},
-					"name": "BRZ"
+					"name": "source1"
 				}
 			],
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "SLV_Sales",
+						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					},
-					"name": "TOSILVER"
+					"name": "sink1"
 				}
 			],
 			"transformations": [],
@@ -26,15 +26,15 @@
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     format: 'parquet') ~> BRZ",
-				"BRZ sink(allowSchemaDrift: true,",
+				"     format: 'parquet') ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> TOSILVER"
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}

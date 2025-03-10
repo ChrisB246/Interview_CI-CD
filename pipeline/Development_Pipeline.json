@@ -18,7 +18,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Source_To_BRZ_DF",
+						"referenceName": "SOURCE_TO_BRZ_DF",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -42,7 +42,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "BRZ_TO_SILVER",
+						"referenceName": "BRZ_TO_SLV_DF",
 						"type": "DataFlowReference"
 					},
 					"compute": {
