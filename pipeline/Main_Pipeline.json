@@ -1,5 +1,5 @@
 {
-	"name": "Development_Pipeline",
+	"name": "Main_Pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -29,9 +29,18 @@
 				}
 			},
 			{
-				"name": "Data flow1",
+				"name": "Bronze To Silver",
 				"type": "ExecuteDataFlow",
-				"dependsOn": [],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "Source To Bronze",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -43,6 +52,39 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "BRZ_TO_SLV_DF",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "Silver To Gold",
+				"type": "ExecuteDataFlow",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "Bronze To Silver",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "SLV_TO_GOLD_DF",
 						"type": "DataFlowReference"
 					},
 					"compute": {

@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "Parquet1",
+						"referenceName": "GLD_Sales",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"

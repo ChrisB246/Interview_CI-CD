@@ -1,9 +1,12 @@
 {
-	"name": "Parquet1",
+	"name": "GLD_Sales",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "dev-synapse343424-WorkspaceDefaultStorage",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Gold"
 		},
 		"annotations": [],
 		"type": "Parquet",
