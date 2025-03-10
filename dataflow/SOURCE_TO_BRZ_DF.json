@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "BRZ_sales",
+						"referenceName": "BRZ_data",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "BRZ_sales",
+						"referenceName": "BRZ_data",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"

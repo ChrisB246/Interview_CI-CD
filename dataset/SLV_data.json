@@ -1,5 +1,5 @@
 {
-	"name": "SLV_Sales",
+	"name": "SLV_data",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "dev-synapse343424-WorkspaceDefaultStorage",

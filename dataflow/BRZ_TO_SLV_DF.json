@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "BRZ_sales",
+						"referenceName": "BRZ_data",
 						"type": "DatasetReference"
 					},
 					"name": "BRZ"
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "SLV_Sales",
+						"referenceName": "SLV_data",
 						"type": "DatasetReference"
 					},
 					"name": "TOSILVER"

@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "SLV_Sales",
+						"referenceName": "SLV_data",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "GLD_Sales",
+						"referenceName": "GLD_data",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"

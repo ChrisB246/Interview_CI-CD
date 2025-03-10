@@ -1,5 +1,5 @@
 {
-	"name": "GLD_Sales",
+	"name": "GLD_data",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "dev-synapse343424-WorkspaceDefaultStorage",
