@@ -1,0 +1,20 @@
+{
+	"name": "SLV_Sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dev-synapse343424-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "sales",
+				"fileSystem": "silver"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
