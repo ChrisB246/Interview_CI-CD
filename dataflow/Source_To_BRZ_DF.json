@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "DelimitedText2",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				}
 			],
@@ -36,8 +32,7 @@
 				"          shipping_date as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     validateSchema: false) ~> source1",
 				"source1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
