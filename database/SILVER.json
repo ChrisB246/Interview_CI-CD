@@ -1,0 +1,22 @@
+{
+	"name": "SILVER",
+	"properties": {
+		"Name": "SILVER",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://general@cb19996dev6jjl7esczhw56.dfs.core.windows.net/SILVER",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "dev-synapse343424-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
