@@ -1,0 +1,33 @@
+{
+	"name": "BRZ_TO_SILVER",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "BRZ_sales",
+						"type": "DatasetReference"
+					},
+					"name": "BRZ"
+				}
+			],
+			"sinks": [
+				{
+					"name": "TOSILVER"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> BRZ",
+				"BRZ sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> TOSILVER"
+			]
+		}
+	}
+}

@@ -5,6 +5,9 @@
 			"referenceName": "dev-synapse343424-WorkspaceDefaultStorage",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Silver"
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
