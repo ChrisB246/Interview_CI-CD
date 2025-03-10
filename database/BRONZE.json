@@ -13,7 +13,7 @@
 			"Provider": "ADLS",
 			"Location": "abfss://bronze@cb19996dev6jjl7esczhw56.dfs.core.windows.net/",
 			"Properties": {
-				"FormatType": "csv",
+				"FormatType": "parquet",
 				"LinkedServiceName": "dev-synapse343424-WorkspaceDefaultStorage"
 			}
 		}
