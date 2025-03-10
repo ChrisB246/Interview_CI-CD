@@ -5,6 +5,10 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "BRZ_sales",
+						"type": "DatasetReference"
+					},
 					"name": "source1"
 				}
 			],
@@ -19,20 +23,10 @@
 			],
 			"transformations": [],
 			"scriptLines": [
-				"source(output(",
-				"          order_id as string,",
-				"          customer_name as string,",
-				"          purchase_date as string,",
-				"          product_name as string,",
-				"          quantity as string,",
-				"          unit_price as string,",
-				"          total_price as string,",
-				"          payment_method as string,",
-				"          shipping_address as string,",
-				"          shipping_date as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> source1",
 				"source1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
