@@ -1,5 +1,5 @@
 {
-	"name": "SLV_TO_GOLD_SALES_FORCAST",
+	"name": "FORCAST_EXAMPLE",
 	"properties": {
 		"nbformat": 4,
 		"nbformat_minor": 2,
@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "true",
 				"spark.dynamicAllocation.minExecutors": "1",
 				"spark.dynamicAllocation.maxExecutors": "4",
-				"spark.autotune.trackingId": "9000b4f8-f488-46cf-a85c-55211aa16126"
+				"spark.autotune.trackingId": "d5a83968-949f-429c-a074-4458ee1310ba"
 			}
 		},
 		"metadata": {
@@ -31,19 +31,12 @@
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/d4dfdc89-05dd-4af2-8265-12a9c38ba51a/resourceGroups/CB19996GroupSynapse/providers/Microsoft.Synapse/workspaces/dev-synapse343424/bigDataPools/newpool",
+				"id": "subscriptions/*/resourceGroups/*/providers/Microsoft.Synapse/workspaces/*/bigDataPools/newpool",
 				"name": "newpool",
-				"type": "Spark",
-				"endpoint": "https://dev-synapse343424.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/newpool",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
-				},
-				"sparkVersion": "3.4",
-				"nodeCount": 10,
-				"cores": 4,
-				"memory": 28,
-				"automaticScaleJobs": true
+				}
 			},
 			"sessionKeepAliveTimeout": 30
 		},
